@@ -1,0 +1,85 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    padding: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-columns: 0.8fr 2fr 0.8fr;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+    min-height: 50vh;
+}
+
+/* Header */
+header {
+    grid-area: header;
+    background: #f1f1f1;
+    padding: 35px;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Nav */
+nav {
+    grid-area: nav;
+    background: #b9fbc0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: inline;
+}
+
+nav a {
+    font-weight: bold;
+    color: darkblue;
+    font-size: 30px;
+}
+
+/* chỉ áp dụng cho Week 01 */
+nav a:nth-child(1) {
+    color: rgb(78, 92, 223);    
+}  
+
+main {
+    grid-area: main;
+    background: #f7bcc6;
+    padding: 65px;
+    text-align: left;
+}
+main h1 {
+    margin-bottom: 10px;
+    font-size: 55px;
+}
+
+main p {
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+aside {
+    grid-area: aside;
+    background: #fff3b0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: left;
+    padding: 65px;;
+}
+
+footer {
+    grid-area: footer;
+    background: #8cb6fa;
+    padding: 50px;
+    text-align: left;
+    font-size: 35px;
+}
